@@ -1,0 +1,34 @@
+=============== Apr 17, 2024 (EEST) ===============
+16:13:09.343804 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:13:09.345517 db@open opening
+16:13:09.345683 version@stat F·[] S·0B[] Sc·[]
+16:13:09.346245 db@janitor F·2 G·0
+16:13:09.346257 db@open done T·733.742µs
+16:13:11.359749 transaction@flush created L0@2 N·376 S·1MiB "00c..c8d,v298":"fde..05b,v352"
+16:13:11.362695 transaction@flush created L0@3 N·84 S·487KiB "035..6fd,v394":"fd6..597,v415"
+16:13:11.362727 version@stat F·[2] S·2MiB[2MiB] Sc·[0.50]
+16:13:59.778097 db@close closing
+16:13:59.778114 db@close done T·16.497µs
+=============== May 8, 2024 (EEST) ===============
+15:40:59.369674 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:40:59.369724 version@stat F·[2] S·2MiB[2MiB] Sc·[0.50]
+15:40:59.369731 db@open opening
+15:40:59.369751 journal@recovery F·1
+15:40:59.370039 journal@recovery recovering @1
+15:40:59.371476 version@stat F·[2] S·2MiB[2MiB] Sc·[0.50]
+15:40:59.373823 db@janitor F·4 G·0
+15:40:59.373831 db@open done T·4.09703ms
+15:41:01.385185 transaction@flush created L0@6 N·378 S·1MiB "00c..c8d,v596":"fde..05b,v545"
+15:41:01.388365 transaction@flush created L0@7 N·82 S·498KiB "04b..2d1,v918":"fc5..266,v860"
+15:41:01.388387 version@stat F·[4] S·4MiB[4MiB] Sc·[1.00]
+15:41:01.389586 table@compaction L0·4 -> L1·0 S·4MiB Q·920
+15:41:01.407598 table@build created L1@8 N·385 S·2MiB "00c..c8d,v596":"db2..d9b,v692"
+15:41:01.411612 table@build created L1@9 N·75 S·440KiB "db4..774,v803":"fde..05b,v545"
+15:41:01.411640 version@stat F·[0 2] S·2MiB[0B 2MiB] Sc·[0.00 0.02]
+15:41:01.412643 table@compaction committed F-2 S-2MiB Ke·0 D·460 T·23.037144ms
+15:41:01.412789 table@remove removed @7
+15:41:01.413054 table@remove removed @6
+15:41:01.413120 table@remove removed @3
+15:41:01.413264 table@remove removed @2
+15:43:15.023208 db@close closing
+15:43:15.023229 db@close done T·20.254µs

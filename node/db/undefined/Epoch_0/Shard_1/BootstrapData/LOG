@@ -1,0 +1,43 @@
+=============== Apr 17, 2024 (EEST) ===============
+16:13:09.358066 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:13:09.359622 db@open opening
+16:13:09.359722 version@stat F·[] S·0B[] Sc·[]
+16:13:09.360237 db@janitor F·2 G·0
+16:13:09.360245 db@open done T·619.238µs
+16:13:59.778160 db@close closing
+16:13:59.778174 db@close done T·13.264µs
+=============== May 8, 2024 (EEST) ===============
+15:40:59.351446 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:40:59.351516 version@stat F·[] S·0B[] Sc·[]
+15:40:59.351525 db@open opening
+15:40:59.351546 journal@recovery F·1
+15:40:59.351657 journal@recovery recovering @1
+15:40:59.358411 memdb@flush created L0@2 N·4 S·9KiB "epo..k_0,v2":"ind..[\x15$,v1"
+15:40:59.358772 version@stat F·[1] S·9KiB[9KiB] Sc·[0.25]
+15:40:59.361771 db@janitor F·3 G·0
+15:40:59.361801 db@open done T·10.263672ms
+15:40:59.361998 db@close closing
+15:40:59.362030 db@close done T·30.293µs
+=============== May 8, 2024 (EEST) ===============
+15:40:59.387758 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:40:59.387826 version@stat F·[1] S·9KiB[9KiB] Sc·[0.25]
+15:40:59.387836 db@open opening
+15:40:59.387862 journal@recovery F·1
+15:40:59.387971 journal@recovery recovering @3
+15:40:59.388359 version@stat F·[1] S·9KiB[9KiB] Sc·[0.25]
+15:40:59.391303 db@janitor F·3 G·0
+15:40:59.391314 db@open done T·3.473794ms
+15:43:15.023579 db@close closing
+15:43:15.023597 db@close done T·18.09µs
+=============== May 8, 2024 (EEST) ===============
+15:45:45.009935 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:45:45.010028 version@stat F·[1] S·9KiB[9KiB] Sc·[0.25]
+15:45:45.010040 db@open opening
+15:45:45.010081 journal@recovery F·1
+15:45:45.010394 journal@recovery recovering @5
+15:45:45.017961 memdb@flush created L0@7 N·4 S·9KiB "epo..k_0,v7":"ind..^)],v6"
+15:45:45.018123 version@stat F·[2] S·18KiB[18KiB] Sc·[0.50]
+15:45:45.020793 db@janitor F·4 G·0
+15:45:45.020806 db@open done T·10.762199ms
+15:45:45.021121 db@close closing
+15:45:45.021165 db@close done T·43.139µs

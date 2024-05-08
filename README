@@ -1,0 +1,51 @@
+Porting MultiversX Node to Unikraft
+
+Important notes:
+- the application has been compiled as pie for the x86_64 architecture;
+- the structure of the project is as follows:
+```
+.
+├── Dockerfile
+├── Kraftfile
+├── lib				
+│   └── x86_64-linux-gnu
+├── lib64
+│   └── ld-linux-x86-64.so.2
+├── libvmexeccapi.so
+├── libwasmer_linux_amd64.so
+├── Makefile.uk
+└── node			--> directory which contains the `node` binary
+    ├── CLI.md				and other required files
+    ├── compiledSCStorage
+    ├── config
+    ├── db
+    ├── factory
+    ├── flags.go
+    ├── main.go
+    ├── node
+    └── stats
+```
+- the command used to start the application is `./node --rest-api-interface=:8080 --log-level *:TRACE`,
+the flags set the used port and the specify the logger level;
+
+- the Unikraft setup is done by running `kraft build --plat qemu --arch x86_64` and then
+`kraft run --log-level debug --log-type basic -W -M 12000M -p 8080:8080 .`
+(problems regarding `-W`);
+
+- the goal is to boot the `node` application using Unikraft and its behaviour should, ideally,
+mimic the one that happens when starting the app on its own.
+
+
+Some observed issues:
+1. Running `kraft run` with `-W` flag (CPU acceleration disabled) seems to fix
+the issue of reaching a blocking state that happens when running with KVM enabled;
+
+2. `sync.query` calls are missing when running the application through Unikraft;
+
+3. Network errors happen when the app does not reach a blocking state (running with `-W`),
+i.e. `ERROR	basichost	basic/basic_host.go:355	failed to resolve local interface addresses`;
+
+4. Starting the app through Unikraft seems to alter the way the app is setting up its
+command line flags; one example is the debug message stating `start in epoch is enabled`
+when using Unikraft, a flag that has not been set; the debug message does not appear
+when booting the node by itself.
